@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline MCQ Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h3><a href="index.html"><i>SWITCH TO MAIN PAGE</i></a></h3>
+            <h1>MCQ Quiz 📝 PRACTICE</h1>
+            <div class="mode-selection">
+                <h3>Select Mode to Start:</h3>
+                <button class="mode-btn" data-mode="rapid-fire">🔥 Rapid Fire</button>
+                <button class="mode-btn" data-mode="overall">🌍 Overall</button>
+                <button class="mode-btn" data-mode="topic-wise">📚 Topic Wise</button>
+            </div>
+            <div id="topic-selection" class="hide">
+                <h3>Select Topic to Start:</h3>
+                <div id="topic-buttons-container">
+                    <button class="topic-btn" data-topic="fundamentals">Fundamentals</button>
+                    <button class="topic-btn" data-topic="OS">Operating System</button>
+                    <button class="topic-btn" data-topic="webdesign">Web Designing</button>
+                    <button class="topic-btn" data-topic="Database">Database System</button>
+                    <button class="topic-btn" data-topic="msword">MS Word</button>
+                    <button class="topic-btn" data-topic="powerpoint">MS Powerpoint</button>
+                    <button class="topic-btn" data-topic="msexcel">MS Excel</button>
+                    <button class="topic-btn" data-topic="SDP">FOR extra</button>
+                    <button class="topic-btn" data-topic="Networking">Network</button>
+                    <button class="topic-btn" data-topic="Security">Cyber Security</button>
+                    <button class="topic-btn" data-topic="Maintenance">Hardware Mainteance</button>
+                    <button class="topic-btn" data-topic="Legislations">Laws and Acts</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen hide">
+            <div class="quiz-header">
+                <h2 id="quiz-title">Quiz</h2>
+                <div class="quiz-controls">
+                    <button id="print-btn" title="Print Questions">🖨️</button>
+                    <div id="timer">05:00</div>
+                </div>
+            </div>
+            <div id="questions-container">
+                </div>
+            <button id="submit-btn">Submit Quiz</button>
+        </div>
+
+        <div id="result-screen" class="screen hide">
+            <h1>Quiz Result 🎉</h1>
+            <div id="score-details">
+                </div>
+            <div>
+                <button id="review-btn">Review Answers</button>
+                <button id="restart-btn">Restart</button>
+            </div>
+        </div>
+        
+        <div id="review-screen" class="screen hide">
+            <h1>Review Your Answers</h1>
+            <div id="review-container">
+                </div>
+            <button id="back-to-result-btn">Back to Result</button>
+        </div>
+    </div>
+
+    <!-- question sources -->
+  <script src="mspowerpoint.js"></script>
+  <script src="msword.js"></script>
+  <script src="fundamentals.js"></script>
+  <script src="operatingsystem.js"></script>
+  <script src="msexcel.js"></script>
+  <script src="extra for sdp.js"></script>
+  <script src="database.js"></script>
+  <script src="webdesign.js"></script>
+  <script src="CN.js"></script>
+  <script src="Cyber.js"></script>
+  <script src="Hard main.js"></script>
+  <script src="laws.js"></script>
+
+  <!-- app logic -->
+    <script src="script.js"></script>
+</body>
+</html>

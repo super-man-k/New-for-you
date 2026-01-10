@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MCQ Practice — Multiple Sources</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Put inside <head> -->
+
+
+<!-- Replace header in body with this improved header -->
+<div class="app-shell">
+<header class="app-header">
+  <div class="header-inner">
+    <div class="title-wrap">
+      <h1>MCQ Practice 📝<a href="index.html"><i>Return to main page</i></a></h1>
+      <p class="sub">Practice 5 / 10 / 20 questions at a time • Switch sources instantly</p>
+    </div>
+    <div class="header-actions">
+      <div class="progress-wrap" aria-hidden="true">
+        <div id="progressBar" class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        <div id="progressLabel" class="progress-label">Page 1 / 1</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main class="container">
+    <div class="controls">
+      <div class="source-buttons" role="toolbar" aria-label="Question Sources">
+        <button class="src-btn active" data-src="both">All Questions</button>
+        <button class="src-btn" data-src="SDP">SDP</button>
+        <button class="src-btn" data-src="fundamentals">Fundamentals</button>
+        <button class="src-btn" data-src="OS">Operating System</button>
+        <button class="src-btn" data-src="msword">Word Source</button>
+        <button class="src-btn" data-src="msexcel">Excel Source</button>
+        <button class="src-btn" data-src="powerpoint">PowerPoint Source</button>
+        <button class="src-btn" data-src="Database">Database System</button>
+        <button class="src-btn" data-src="webdesign">Web Design</button>
+        <button class="src-btn" data-src="Networking">Networking</button>
+        <button class="src-btn" data-src="Security">Cyber Security</button>
+        <button class="src-btn" data-src="Maintenance">Hardware Mainteance</button>
+        <button class="src-btn" data-src="Legislations">Laws and Acts</button>
+      </div>
+
+      <div class="spacer"></div>
+
+      <label for="pageSizeSelect" class="pill">Per page</label>
+      <select id="pageSizeSelect" title="Questions per page">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+
+      <button id="shuffleBtn" class="alt">Shuffle</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="questionGrid" class="grid" tabindex="-1"></div>
+
+    <div class="footer-controls">
+      <div class="nav">
+        <div class="jump-row">
+          <button id="prevBtn">← Prev</button>
+          <button id="jumpBack5">← -5</button>
+          <button id="jumpBack10">← -10</button>
+          <button id="jumpForward5">+5 →</button>
+          <button id="jumpForward10">+10 →</button>
+          <button id="nextBtn" class="primary">Next →</button>
+        </div>
+      </div>
+
+      <div class="status">
+        <span id="pageInfo" class="pill">Page 1</span>
+        <span id="scoreInfo" class="pill">Score: 0</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- question sources -->
+  <script src="mspowerpoint.js"></script>
+  <script src="msword.js"></script>
+  <script src="fundamentals.js"></script>
+  <script src="operatingsystem.js"></script>
+  <script src="msexcel.js"></script>
+  <script src="extra for sdp.js"></script>
+  <script src="database.js"></script>
+  <script src="webdesign.js"></script>
+  <script src="CN.js"></script>
+  <script src="Cyber.js"></script>
+  <script src="Hard main.js"></script>
+  <script src="laws.js"></script>
+
+  <!-- app logic -->
+  <script src="app.js"></script>
+</body>
+</html>

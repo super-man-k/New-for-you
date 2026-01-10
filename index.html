@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0f172a;
+            font-family: system-ui, sans-serif;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* space between buttons */
+            width: max-content;
+        }
+        
+        .btn {
+            width: 220px;        /* fixed width */
+            height: 56px;        /* fixed height */ 
+            text-align: center;
+            padding: 14px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            box-shadow: 0 10px 30px rgba(34, 211, 238, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 18px 40px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid rgba(35, 167, 244, 0.671);
+        }
+  </style>
+</head>
+<body>
+    <div class="button-group">
+        <a href="remember.html"><button class="btn">MCQ-STUDY</button></a>
+        <a href="practice.html"><button class="btn">MCQ-PRACTICE</button></a>
+    </div>
+</body>
+</html>
