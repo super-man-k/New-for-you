@@ -101,7 +101,7 @@ button:active {
 }
 #questions-container {
     text-align: left;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-y: auto;
     padding-right: 15px;
 }
@@ -317,3 +317,4 @@ button:active {
     }
 
 }
+
