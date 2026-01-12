@@ -19,6 +19,7 @@ if (typeof QUESTIONS_CN === "undefined") window.QUESTIONS_CN = [];
 if (typeof QUESTIONS_CYBER_SECURITY === "undefined") window.QUESTIONS_CYBER_SECURITY = [];
 if (typeof QUESTIONS_HARDWARE_MAINTENANCE === "undefined") window.QUESTIONS_HARDWARE_MAINTENANCE = [];
 if (typeof QUESTIONS_RULES_AND_RELIGATIONS === "undefined") window.QUESTIONS_RULES_AND_RELIGATIONS = [];
+if (typeof QUESTIONS_SHORTCUTKEY.map ==="undefined") window.QUESTIONS_SHORTCUTKEY = [];
 
 
 
@@ -46,7 +47,8 @@ function buildMaster() {
     masterQuestions = QUESTIONS_HARDWARE_MAINTENANCE.map((q, i) => ({ ...q, __src: "Hardware Maintenance", __srcIndex: i }));
   } else if (activeSource === "Legislations") {
     masterQuestions = QUESTIONS_RULES_AND_RELIGATIONS.map((q, i) => ({ ...q, __src: "Relevant Legislations", __srcIndex: i }));
-  }
+  } else if (activeSource === "shortcutkey") {
+    masterQuestions = QUESTIONS_SHORTCUTKEY.map((q, i) => ({ ...q, __src: "Shortcut Keys", __srcIndex: i }));
   else if (activeSource === "msword") {
     masterQuestions = QUESTIONS_WORD.map((q, i) => ({ ...q, __src: "MS Word", __srcIndex: i }));
   } else { // both
@@ -58,6 +60,7 @@ function buildMaster() {
       ...QUESTIONS_EXCEL.map((q,i) => ({...q, __src: "Excel", __srcIndex: i})),
       ...QUESTIONS_POWERPOINT.map((q, i) => ({ ...q, __src: "powerpoint", __srcIndex: i })),
       ...QUESTIONS_DATABASE.map((q,i) => ({...q, __src: "Database System", __srcIndex: i})),
+      ...QUESTIONS_SHORTCUTKEY.map((q, i) => ({...q, __src: "Shortcut Keys", __srcIndex: i})),
       ...QUESTIONS_WEB.map((q,i) => ({...q, __src: "Web Designing", __srcIndex: i})),
       ...QUESTIONS_CN.map((q,i) => ({...q, __src: "Computer Network", __srcIndex: i})),
       ...QUESTIONS_CYBER_SECURITY.map((q,i) => ({...q, __src: "Cyber Security", __srcIndex: i})),
@@ -292,4 +295,5 @@ document.addEventListener("DOMContentLoaded", () => {
   buildMaster();
   renderPage();
   goToTopInstant();
+
 });
