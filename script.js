@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...QUESTIONS_HARDWARE_MAINTENANCE,
         ...QUESTIONS_RULES_AND_RELIGATIONS,
         ...QUESTIONS_DATABASE,
+        ...QUESTIONS_SHORTCUTKEY,
     ];
 
     const questionsByCategory = {
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Maintenance: QUESTIONS_HARDWARE_MAINTENANCE,
         Legislations: QUESTIONS_RULES_AND_RELIGATIONS,
         Database: QUESTIONS_DATABASE,
+        shortcutkey: QUESTIONS_SHORTCUTKEY,
     };
 
     // ==================== DOM Elements ====================
@@ -269,4 +271,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.mode-btn, .topic-btn').forEach(btn => btn.classList.remove('active'));
         topicSelection.classList.add('hide');
     }
+
 });
